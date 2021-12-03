@@ -128,9 +128,20 @@ button {
     z-index: 3;
 }
 
+.header__language {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center; justify-content: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: #ffffff;
+    cursor: pointer;
+}
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+.language__title {
+    font-size: 13px;
+    font-weight: 600;
 }
