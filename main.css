@@ -8,6 +8,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
 .container {
     max-width: 1110px;
     margin: 0 auto;
@@ -15,16 +24,66 @@
 
 .header {
     height: 770px;
+    position: relative;
+}
+
+.header__logo {
+    max-width: 350px;
+    height: 52px;
+    margin-top: 70px;
+}
+
+.header__description {
+    max-width: 540px;
+    margin-top: 220px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #30318c;
+    font-size: 30px;
+}
+
+.header__description span {
+    font-weight: 600;
+}
+
+.header__feedback-btn {
+    min-height: 55px;
+    display: block;
+    font-size: 15px;
+    padding: 0 43px;
+    border: 1px solid var(--dark-blue);
+    background: #ffffff;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    border-radius: 50px;
+    margin: 160px auto 0;
 }
 
 .header__slider {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header__slider .swiper {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
 .header__slide {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .header__slide::after {
@@ -62,4 +121,16 @@
 
 .header__slider .swiper-pagination-bullet-active {
     background: var(--dark-blue);
+}
+
+.header__content {
+    position: relative;
+    z-index: 3;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
 }

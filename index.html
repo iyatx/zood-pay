@@ -6,28 +6,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ZoodPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
 <header class="header">
-    <div class="container">
-
+    <div class="container header__content">
+        <img src="./assets/images/logo.png" class="header__logo" alt="Logo">
+        <p class="header__description">
+            Продавайте товары и услуги
+            с&nbsp;честной рассрочкой ZOOD<span>PAY</span>,
+            <span>без&nbsp;комиссии</span> и <span>переплат</span>
+        </p>
+        <button class="header__feedback-btn">
+            Отправить заявку
+        </button>
     </div>
     <div class="header__slider swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide header__slide">
-                <img src="./assets/images/header/slides/1.png" alt="Slider image">
-            </div>
-            <div class="swiper-slide header__slide">
-                <img src="./assets/images/header/slides/2.png" alt="Slider image">
-            </div>
-            <div class="swiper-slide header__slide">
-                <img src="./assets/images/header/slides/3.png" alt="Slider image">
-            </div>
-            <div class="swiper-slide header__slide">
-                <img src="./assets/images/header/slides/4.png" alt="Slider image">
-            </div>
+            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/1.png')"></div>
+            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/2.png')"></div>
+            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/3.png')"></div>
+            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/4.png')"></div>
         </div>
         <div class="swiper-pagination container"></div>
     </div>
