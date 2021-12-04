@@ -138,22 +138,34 @@ button {
 }
 
 .header__language {
-    width: 50px;
-    height: 40px;
-    display: flex;
-    align-items: center; justify-content: center;
-    border-radius: 6px;
     position: absolute;
-    top: 20px;
+    top: 24px;
     right: 0;
-    background: #ffffff;
-    cursor: pointer;
 }
 
 .language__title {
+    width: 50px;
+    height: 38px;
     font-size: 13px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #ffffff;
+    cursor: pointer;
+    padding-left: 15px;
+    position: relative;
+    color: #666666;
 }
+
+.language__title-icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
 
 .get__block {
     display: flex;
