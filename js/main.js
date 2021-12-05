@@ -1,3 +1,4 @@
+// State
 const state = {
     popupShowClass: 'feedback__popup--show'
 }
@@ -13,7 +14,7 @@ const feedbackPopup = document.querySelector('.feedback__popup');
 const feedbackPopupOverlay = document.querySelector('.popup__overlay');
 const feedbackShowPopupBtns = document.querySelectorAll('.feedback-btn');
 
-
+// Methods
 const changeLanguage = (option) => {
     activeLanguage.value = option.textContent
 }
@@ -30,6 +31,8 @@ const openFeedbackPopup = () => {
     feedbackPopup.classList.add(state.popupShowClass);
 }
 
+
+// Listeners
 toggleLanguageDropdown.addEventListener('click', toggleDropdownOptions);
 feedbackPopupOverlay.addEventListener('click', closeFeedbackPopup)
 feedbackPopupCloseBtn.addEventListener('click', closeFeedbackPopup)
