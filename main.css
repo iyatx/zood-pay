@@ -695,6 +695,15 @@ input {
     .footer {
         padding-top: 55px;
     }
+
+    .popup__container {
+        height: 80vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 
@@ -844,6 +853,10 @@ input {
 
     .popup__container {
         padding: 15px;
+    }
+
+    .popup__container select, .popup__container input, .popup__container input::placeholder {
+        font-size: 14px;
     }
 
     .form__upload-label, .form__upload-btn {
