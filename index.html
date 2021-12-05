@@ -25,16 +25,14 @@
             Отправить заявку
         </button>
 
-        <div class="header__language language">
-            <div class="language__title">
-                <img src="./assets/icons/arrow-down.png" class="language__title-icon" alt="">
-                <span>Ru</span>
-            </div>
-            <div class="language__dropdown dropdown">
-                <ul class="dropdown__list">
-                    <li class="dropdown__item">Ru</li>
-                    <li class="dropdown__item">Uz</li>
-                </ul>
+        <div class="header__toggle-language">
+            <div class="dropdown">
+                <input class="text-box" type="text" value="Ru" readonly />
+                <img class="dropdown__icon" src="./assets/icons/arrow-down.png" alt="">
+                <div class="options">
+                    <div onclick="show('Ru')">Ru</div>
+                    <div onclick="show('Uz')">Uz</div>
+                </div>
             </div>
         </div>
     </div>

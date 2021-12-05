@@ -14,14 +14,25 @@ const headerSlider = new Swiper('.header__slider', {
 
 const thinkSlider = new Swiper('.think__slider', {
     loop: true,
-    slidesPerView: 6,
+    slidesPerView: 'auto',
     spaceBetween: 30,
+
+    breakpoints: {
+        600: {
+            slidesPerView: 4
+        },
+        1200: {
+            slidesPerView: 6,
+        },
+    }
 })
 
 
-const languageSelect = document.querySelector('.language__title');
-const dropdownList = document.querySelector('.language__dropdown');
+function show(value) {
+    document.querySelector(".text-box").value = value;
+}
 
-languageSelect.addEventListener('click', (e) => {
-    dropdownList.classList.toggle('dropdown--show')
-})
+let dropdown = document.querySelector(".dropdown")
+dropdown.onclick = function() {
+    dropdown.classList.toggle("active")
+}
