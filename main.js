@@ -1,3 +1,8 @@
+const state = {
+    popupShowClass: 'feedback__popup--show'
+}
+
+
 const headerSlider = new Swiper('.header__slider', {
     loop: true,
     effect: "fade",
@@ -28,11 +33,37 @@ const thinkSlider = new Swiper('.think__slider', {
 })
 
 
-function show(value) {
-    document.querySelector(".text-box").value = value;
+// Select language variables
+const toggleLanguageDropdown = document.querySelector(".dropdown");
+const activeLanguage = document.querySelector('.text-box');
+const languageOptions = document.querySelectorAll('.header__toggle-language .options div');
+
+// Popups variables
+const feedbackPopupCloseBtn = document.querySelector('.feedback__popup-cancel');
+const feedbackPopup = document.querySelector('.feedback__popup');
+const feedbackPopupOverlay = document.querySelector('.popup__overlay');
+const feedbackShowPopupBtns = document.querySelectorAll('.feedback-btn');
+
+const changeLanguage = (option) => {
+    activeLanguage.value = option.textContent
 }
 
-let dropdown = document.querySelector(".dropdown")
-dropdown.onclick = function() {
-    dropdown.classList.toggle("active")
+const toggleDropdownOptions = () => {
+    toggleLanguageDropdown.classList.toggle("active")
 }
+
+const closeFeedbackPopup = () => {
+    feedbackPopup.classList.remove(state.popupShowClass)
+}
+
+const openFeedbackPopup = () => {
+    feedbackPopup.classList.add(state.popupShowClass);
+}
+
+toggleLanguageDropdown.addEventListener('click', toggleDropdownOptions);
+feedbackPopupOverlay.addEventListener('click', closeFeedbackPopup)
+feedbackPopupCloseBtn.addEventListener('click', closeFeedbackPopup)
+feedbackShowPopupBtns.forEach((item) => {
+    item.addEventListener('click', openFeedbackPopup);
+})
+languageOptions.forEach(item => item.addEventListener('click', () => changeLanguage(item)))

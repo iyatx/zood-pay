@@ -8,11 +8,78 @@
     <title>ZoodPay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@100;400;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles/swiper.min.css">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+
+<div class="popup feedback__popup">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+        <button class="feedback__popup-cancel">
+            <img src="./assets/icons/cancel.png" alt="Cancel Image">
+        </button>
+        <h3 class="feedback__popup-title">Форма заявки</h3>
+        <form>
+            <div class="feedback__popup-form">
+                <div class="form__field form__field-required">
+                    <select>
+                        <option value="Город">Город</option>
+                        <option value="Город">Ташкент</option>
+                        <option value="Город">Самарканд</option>
+                        <option value="Город">Навои</option>
+                    </select>
+                </div>
+                <div class="form__field form__field-required">
+                    <input type="text" placeholder="Название магазина">
+                </div>
+                <div class="form__field form__field-required">
+                    <input type="text" placeholder="Количество магазинов">
+                </div>
+                <div class="form__field form__field-required">
+                    <select>
+                        <option value="">Категория</option>
+                    </select>
+                </div>
+                <div class="form__field form__field-required">
+                    <select>
+                        <option value="">Сабкатегория</option>
+                    </select>
+                </div>
+                <div class="form__field form__field-required">
+                    <input type="text" placeholder="Имя">
+                </div>
+                <div class="form__field form__field-required">
+                    <input type="text" placeholder="Номер телефона">
+                </div>
+                <div class="form__field form__field-required">
+                    <select>
+                        <option value="">Должность инициатора</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="shop-photo-outside" class="form__upload-label">
+                        <p>Фотография магазина снаружи</p>
+                        <div class="form__upload-btn">выбрать файл</div>
+                    </label>
+                    <input type="file" id="shop-photo-outside">
+                </div>
+                <div>
+                    <label for="shop-photo-inside" class="form__upload-label">
+                        <p>Фотография магазина изнутри</p>
+                        <div class="form__upload-btn">выбрать файл</div>
+                    </label>
+                    <input type="file" id="shop-photo-inside">
+                </div>
+            </div>
+            <p class="feedback__popup-warning">Поля отмеченные знаком * - обязательны к заполнению</p>
+            <button class="feedback-btn feedback__popup-submit">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+
 <header class="header">
     <div class="container header__content">
         <img src="./assets/images/logo.png" class="header__logo" alt="Logo">
@@ -27,21 +94,25 @@
 
         <div class="header__toggle-language">
             <div class="dropdown">
-                <input class="text-box" type="text" value="Ru" readonly />
+                <input class="text-box" type="text" value="Ru" readonly/>
                 <img class="dropdown__icon" src="./assets/icons/arrow-down.png" alt="">
                 <div class="options">
-                    <div onclick="show('Ru')">Ru</div>
-                    <div onclick="show('Uz')">Uz</div>
+                    <div data-value="ru">Ru</div>
+                    <div data-value="uz">Uz</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="header__slider swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/1.png')"></div>
-            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/2.png')"></div>
-            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/3.png')"></div>
-            <div class="swiper-slide header__slide" style="background-image: url('assets/images/header/slides/4.png')"></div>
+            <div class="swiper-slide header__slide"
+                 style="background-image: url('assets/images/header/slides/1.png')"></div>
+            <div class="swiper-slide header__slide"
+                 style="background-image: url('assets/images/header/slides/2.png')"></div>
+            <div class="swiper-slide header__slide"
+                 style="background-image: url('assets/images/header/slides/3.png')"></div>
+            <div class="swiper-slide header__slide"
+                 style="background-image: url('assets/images/header/slides/4.png')"></div>
         </div>
         <div class="swiper-pagination container"></div>
     </div>
@@ -62,17 +133,18 @@
                             <img src="./assets/icons/user.svg" alt="User Icon">
                         </div>
                         <h3 class="get__item-title">Поток новых клиентов</h3>
-                        <p class="get__item-description">более 1,5 млн клиентов уже совершили <br> покупки с <span>ZOOD</span>PAY</p>
+                        <p class="get__item-description">более 1,5 млн клиентов уже совершили <br> покупки с
+                            <span>ZOOD</span>PAY</p>
                     </div>
                     <div class="get__item">
                         <div class="get__item-image">
-                            <img src="./assets/icons/bag.svg" alt="User Icon">
+                            <img src="./assets/icons/bag.svg" alt="Bag Icon">
                         </div>
                         <h3 class="get__item-title">Увеличение среднего чека на <br> 20% и более</h3>
                     </div>
                     <div class="get__item">
                         <div class="get__item-image">
-                            <img src="./assets/icons/currency.svg" alt="User Icon">
+                            <img src="./assets/icons/currency.svg" alt="Currency Icon">
                         </div>
                         <h3 class="get__item-title">Увеличение оборота на 30% и более</h3>
                     </div>
