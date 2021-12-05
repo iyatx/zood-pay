@@ -550,6 +550,10 @@ button {
         height: 422px;
     }
 
+    .header__toggle-language {
+        top: 20px;
+    }
+
     .header__logo {
         max-width: 290px;
         height: auto;
