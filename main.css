@@ -688,5 +688,22 @@ button {
     .footer__container {
         align-items: center;
     }
+}
 
+@media only screen and (max-width: 480px) {
+    .header__description {
+        font-size: 20px;
+    }
+
+    .get__item-title {
+        font-size: 18px;
+    }
+
+    .get__item-description {
+        font-size: 16px;
+    }
+
+    .get__images img {
+        left: -160px;
+    }
 }
