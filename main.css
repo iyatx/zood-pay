@@ -652,6 +652,11 @@ button {
         margin-top: 60px;
     }
 
+    .think .container {
+        margin: 0;
+        padding-left: 15px;
+    }
+
     .think__slide {
         width: 160px;
     }
