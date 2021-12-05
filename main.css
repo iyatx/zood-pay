@@ -30,6 +30,12 @@ button {
     text-align: center;
 }
 
+.section__subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .header {
     height: 770px;
     position: relative;
@@ -169,7 +175,6 @@ button {
 
 .get__block {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-top: 12px;
 }
@@ -194,15 +199,23 @@ button {
 
 .get__items {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 75px;
     padding-left: 17px;
+    padding-top: 55px;
 }
 
 .get__item {
     color: #30318c;
 }
+
+.get__item:not(:first-child) {
+    margin-top: 70px;
+}
+
+.get__item:last-child {
+    margin-top: 80px;
+}
+
+
 
 .get__item-title {
     margin-top: 20px;
@@ -277,12 +290,6 @@ button {
 
 .think {
     margin-top: 45px;
-}
-
-.think__subtitle {
-    font-size: 20px;
-    margin-top: 20px;
-    text-align: center;
 }
 
 .think__slider {
@@ -508,7 +515,7 @@ button {
     }
 
     .get__item-description {
-        margin-top: 18px;
+        margin-top: 10px;
     }
 
     .get__line--bottom {
@@ -565,7 +572,7 @@ button {
     }
 
 
-    .get__line--top {
+    .get__line {
         display: none;
     }
 
@@ -579,11 +586,12 @@ button {
 
     .get__images img {
         position: relative;
+        top: 10px;
         left: -100px;
     }
 
     .get__item-title {
-        margin-top: 25px;
+        margin-top: 17px;
     }
 
     .get__item-description {
@@ -591,6 +599,85 @@ button {
     }
 
     .get__items {
-        gap: 30px;
+        padding-left: 9px;
+        padding-top: 66px;
     }
+
+    .get__item:not(:first-child) {
+        margin-top: 15px;
+    }
+
+    .get__images {
+        padding: 0;
+    }
+
+    .section__title {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section__title span {
+        font-weight: 400;
+    }
+
+    .sale {
+        padding-top: 30px;
+    }
+
+    .sale__line {
+        display: none;
+    }
+
+    .sale__item {
+        max-width: 230px;
+    }
+
+    .sale__items {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .sale__item:nth-child(2) {
+        margin: 20px 0 18px;
+    }
+
+
+    .think {
+        margin-top: 60px;
+    }
+
+    .think__slide {
+        width: 160px;
+    }
+
+    .think__slider {
+        margin-top: 26px;
+    }
+
+    .think__btn {
+        margin-top: 25px;
+    }
+
+    .become-partner__title {
+        margin-top: 50px;
+    }
+
+    .become-partner__subtitle {
+        margin-top: 5px;
+    }
+
+    .become-partner__block {
+        margin-top: 73px;
+        row-gap: 45px;
+    }
+    .footer {
+        padding-top: 38px;
+    }
+
+    .footer__container {
+        align-items: center;
+    }
+
 }
