@@ -23,21 +23,23 @@ const toggleDropdownOptions = () => {
     toggleLanguageDropdown.classList.toggle("active")
 }
 
-const closeFeedbackPopup = () => {
-    feedbackPopup.classList.remove(state.popupShowClass)
-}
+const toggleFeedbackPopup = () => {
+    feedbackPopup.classList.toggle(state.popupShowClass)
+    const body = document.body;
 
-const openFeedbackPopup = () => {
-    feedbackPopup.classList.add(state.popupShowClass);
+    if (feedbackPopup.classList.contains(state.popupShowClass)) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = 'initial'
+    }
 }
-
 
 // Listeners
 toggleLanguageDropdown.addEventListener('click', toggleDropdownOptions);
-feedbackPopupOverlay.addEventListener('click', closeFeedbackPopup)
-feedbackPopupCloseBtn.addEventListener('click', closeFeedbackPopup)
+feedbackPopupOverlay.addEventListener('click', toggleFeedbackPopup)
+feedbackPopupCloseBtn.addEventListener('click', toggleFeedbackPopup)
 feedbackShowPopupBtns.forEach((item) => {
-    item.addEventListener('click', openFeedbackPopup);
+    item.addEventListener('click', toggleFeedbackPopup);
 })
 languageOptions.forEach(item => item.addEventListener('click', () => changeLanguage(item)))
 
