@@ -833,7 +833,7 @@ input {
     }
     .popup__container {
         padding: 15px;
-        height: 80vh;
+        height: 75vh;
     }
     .popup__container select,
     .popup__container input,
