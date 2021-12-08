@@ -14,6 +14,9 @@ const feedbackPopup = document.querySelector('.feedback__popup');
 const feedbackPopupOverlay = document.querySelector('.popup__overlay');
 const feedbackShowPopupBtns = document.querySelectorAll('.feedback-btn');
 
+// File Inputs
+const fileInputs = document.querySelectorAll('input[type=file]');
+
 // Methods
 const changeLanguage = (option) => {
     activeLanguage.value = option.textContent
@@ -34,14 +37,20 @@ const toggleFeedbackPopup = () => {
     }
 }
 
+const handleChangeInputFile = (e) => {
+    const title = e.target.files[0].name;
+
+    const sibling = e.target.previousElementSibling.querySelector('.form__upload-btn');
+    sibling.textContent = title
+}
+
 // Listeners
 toggleLanguageDropdown.addEventListener('click', toggleDropdownOptions);
 feedbackPopupOverlay.addEventListener('click', toggleFeedbackPopup)
 feedbackPopupCloseBtn.addEventListener('click', toggleFeedbackPopup)
-feedbackShowPopupBtns.forEach((item) => {
-    item.addEventListener('click', toggleFeedbackPopup);
-})
+feedbackShowPopupBtns.forEach((item) => item.addEventListener('click', toggleFeedbackPopup))
 languageOptions.forEach(item => item.addEventListener('click', () => changeLanguage(item)))
+fileInputs.forEach((input) => input.addEventListener('change',  handleChangeInputFile))
 
 
 // Sliders
@@ -72,3 +81,5 @@ new Swiper('.think__slider', {
         },
     }
 })
+
+
