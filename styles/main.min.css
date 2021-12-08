@@ -832,8 +832,8 @@ input {
         align-items: center;
     }
     .popup__container {
+        height: 75vh !important;
         padding: 15px;
-        height: 75vh;
     }
     .popup__container select,
     .popup__container input,
